@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PayrollManagement.Infraestructure.Persistence;
+using PayrollManagement.Infraestructure.Employees.Persistence;
 
 namespace PayrollManagement.API.Extensions
 {

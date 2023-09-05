@@ -16,4 +16,10 @@
     <ProjectReference Include="..\PayrollManagement.Domain\PayrollManagement.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\Delete\" />
+    <Folder Include="Users\Update\" />
+    <Folder Include="Users\Register\" />
+  </ItemGroup>
+
 </Project>

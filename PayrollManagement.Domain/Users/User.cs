@@ -1,0 +1,53 @@
+﻿using PayrollManagement.Domain.Primitives;
+using PayrollManagement.Domain.ValueObjects;
+
+namespace PayrollManagement.Domain.Users
+{
+    public sealed class User : AggregateRoot
+    {
+        public UserId UserId { get; private set; } 
+
+        public UserName UserName { get; private set; }
+
+        public Email Email { get; private set; }
+
+        public Password Password { get; private set; }
+
+        public User(UserId userId, UserName userName, Email email, Password password)
+        {
+            UserId = userId;
+            UserName = userName;
+            Email = email;
+            Password = password;
+        }
+
+        private User()
+        {
+
+        }
+
+        public User(UserName userName, Email email, Password password)
+        {
+            UserName = userName;
+            Email = email;
+            Password = password;
+        }
+ 
+        public static User UpdateUser(UserId userId, 
+            UserName userName, 
+            Email email, 
+            Password password)
+        {
+            return new User(userId, userName, email, password);
+        }
+
+        public static User UpdateUser(UserName 
+            userName, 
+            Email email, 
+            Password password)
+        {
+            return new User(userName, email, password); 
+        }
+
+    }
+}
