@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
 using PayrollManagement.Application.Data;
 using PayrollManagement.Domain.Employees;
 using PayrollManagement.Domain.Primitives;
-using PayrollManagement.Infraestructure.Employees.Persistence;
-using PayrollManagement.Infraestructure.Employees.Persistence.Repositories;
+using PayrollManagement.Infraestructure.Persistence;
+using PayrollManagement.Infraestructure.Persistence.Repositories;
+
 
 namespace PayrollManagement.Infraestructure
 {
