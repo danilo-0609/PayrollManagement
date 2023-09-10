@@ -20,7 +20,7 @@ namespace PayrollManagement.Domain.ValueObjects
                 return null;
             }
 
-            string passwordHash = Password.GenerateHash256(value);
+            string passwordHash = GenerateHash256(value);
             return new Password(passwordHash);
         }
 

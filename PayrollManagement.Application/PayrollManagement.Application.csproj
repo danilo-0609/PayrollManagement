@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Users\Delete\**" />
+    <Compile Remove="Users\Update\**" />
+    <EmbeddedResource Remove="Users\Delete\**" />
+    <EmbeddedResource Remove="Users\Update\**" />
+    <None Remove="Users\Delete\**" />
+    <None Remove="Users\Update\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
@@ -14,12 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PayrollManagement.Domain\PayrollManagement.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Users\Delete\" />
-    <Folder Include="Users\Update\" />
-    <Folder Include="Users\Register\" />
   </ItemGroup>
 
 </Project>

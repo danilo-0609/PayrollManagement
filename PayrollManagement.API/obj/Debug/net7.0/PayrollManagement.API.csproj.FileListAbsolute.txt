@@ -75,3 +75,5 @@ C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.API\obj\Debug\
 C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.API\obj\Debug\net7.0\PayrollManagement.API.pdb
 C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.API\obj\Debug\net7.0\PayrollManagement.API.genruntimeconfig.cache
 C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.API\obj\Debug\net7.0\ref\PayrollManagement.API.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.API\obj\Debug\net7.0\PayrollManagement.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -13,12 +13,15 @@ namespace PayrollManagement.Domain.Users
 
         public Password Password { get; private set; }
 
-        public User(UserId userId, UserName userName, Email email, Password password)
+        public string Role { get; private set; }
+
+        public User(UserId userId, UserName userName, Email email, Password password, string role)
         {
             UserId = userId;
             UserName = userName;
             Email = email;
             Password = password;
+            Role = role;
         }
 
         private User()
@@ -32,13 +35,22 @@ namespace PayrollManagement.Domain.Users
             Email = email;
             Password = password;
         }
- 
+
+        public User(UserName userName, Email email, Password password, string role)
+        {
+            UserName = userName;
+            Email = email;
+            Password = password;
+            Role = role;
+        }
+
         public static User UpdateUser(UserId userId, 
             UserName userName, 
             Email email, 
-            Password password)
+            Password password,
+            string role)
         {
-            return new User(userId, userName, email, password);
+            return new User(userId, userName, email, password, role);
         }
 
         public static User UpdateUser(UserName 
@@ -47,6 +59,15 @@ namespace PayrollManagement.Domain.Users
             Password password)
         {
             return new User(userName, email, password); 
+        }
+
+        public static User UpdateUser(UserName
+            userName,
+            Email email,
+            Password password, 
+            string role)
+        {
+            return new User(userName, email, password, role);
         }
 
     }

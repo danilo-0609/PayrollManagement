@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using PayrollManagement.API;
 using PayrollManagement.API.Extensions;
 using PayrollManagement.API.Middlewares;
+using PayrollManagement.API.OptionsSetup;
 using PayrollManagement.Application;
 using PayrollManagement.Infraestructure;
 
@@ -18,6 +20,14 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(5001);
     options.ListenAnyIP(7001, configure => configure.UseHttps());
 });
+
+builder.Services.AddAuthentication(auth => 
+       auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer();
+
+
+builder.Services.ConfigureOptions<JwtOptionsSetup>();
+builder.Services.ConfigureOptions<JwtBearerOptionsSetup>();
 
 var app = builder.Build();
 
@@ -38,7 +48,10 @@ app.UseCors(builder => builder
         .AllowAnyOrigin()
         .AllowAnyMethod());
 
+app.UseAuthentication();
+
 app.UseAuthorization();
+
 
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
