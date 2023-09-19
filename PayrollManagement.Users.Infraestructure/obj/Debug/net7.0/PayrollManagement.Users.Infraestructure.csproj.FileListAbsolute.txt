@@ -1,0 +1,5 @@
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Infraestructure\obj\Debug\net7.0\PayrollManagement.Users.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Infraestructure\obj\Debug\net7.0\PayrollManagement.Users.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Infraestructure\obj\Debug\net7.0\PayrollManagement.Users.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Infraestructure\obj\Debug\net7.0\PayrollManagement.Users.Infraestructure.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Infraestructure\obj\Debug\net7.0\PayrollManagement.Users.Infraestructure.csproj.CoreCompileInputs.cache

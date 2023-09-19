@@ -20,10 +20,8 @@ namespace PayrollManagement.API.Middlewares
             }
             catch(Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, ex.Message, ex.InnerException);
                 
-                var innerError = ex.InnerException; 
-
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
                 var problemDetails = new ProblemDetails
@@ -31,7 +29,7 @@ namespace PayrollManagement.API.Middlewares
                     Status = (int)HttpStatusCode.InternalServerError,
                     Title = "Server error",
                     Type = "Server error",
-                    Detail = "An internal server has occurred"
+                    Detail = "An internal server error has occurred"
                 };
 
                 string json = JsonSerializer.Serialize(problemDetails);

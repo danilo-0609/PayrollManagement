@@ -1067,23 +1067,23 @@
           }
         }
       },
-      "PayrollManagement.Application/1.0.0": {
+      "PayrollManagement.Employees.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "FluentValidation.DependencyInjectionExtensions": "11.7.1",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "PayrollManagement.Domain": "1.0.0"
+          "PayrollManagement.Employees.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/PayrollManagement.Application.dll": {}
+          "bin/placeholder/PayrollManagement.Employees.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PayrollManagement.Application.dll": {}
+          "bin/placeholder/PayrollManagement.Employees.Application.dll": {}
         }
       },
-      "PayrollManagement.Domain/1.0.0": {
+      "PayrollManagement.Employees.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1091,13 +1091,13 @@
           "MediatR": "12.1.1"
         },
         "compile": {
-          "bin/placeholder/PayrollManagement.Domain.dll": {}
+          "bin/placeholder/PayrollManagement.Employees.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PayrollManagement.Domain.dll": {}
+          "bin/placeholder/PayrollManagement.Employees.Domain.dll": {}
         }
       },
-      "PayrollManagement.Infraestructure/1.0.0": {
+      "PayrollManagement.Employees.Infraestructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1107,14 +1107,24 @@
           "Microsoft.EntityFrameworkCore.Relational": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "PayrollManagement.Application": "1.0.0",
-          "PayrollManagement.Domain": "1.0.0"
+          "PayrollManagement.Employees.Domain": "1.0.0",
+          "PayrollManagement.Payroll.Application": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/PayrollManagement.Infraestructure.dll": {}
+          "bin/placeholder/PayrollManagement.Employees.Infraestructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PayrollManagement.Infraestructure.dll": {}
+          "bin/placeholder/PayrollManagement.Employees.Infraestructure.dll": {}
+        }
+      },
+      "PayrollManagement.Payroll.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/PayrollManagement.Payroll.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PayrollManagement.Payroll.Application.dll": {}
         }
       }
     }
@@ -2971,20 +2981,25 @@
         "version.txt"
       ]
     },
-    "PayrollManagement.Application/1.0.0": {
+    "PayrollManagement.Employees.Application/1.0.0": {
       "type": "project",
-      "path": "../PayrollManagement.Application/PayrollManagement.Application.csproj",
-      "msbuildProject": "../PayrollManagement.Application/PayrollManagement.Application.csproj"
+      "path": "../PayrollManagement.Employees.Application/PayrollManagement.Employees.Application.csproj",
+      "msbuildProject": "../PayrollManagement.Employees.Application/PayrollManagement.Employees.Application.csproj"
     },
-    "PayrollManagement.Domain/1.0.0": {
+    "PayrollManagement.Employees.Domain/1.0.0": {
       "type": "project",
-      "path": "../PayrollManagement.Domain/PayrollManagement.Domain.csproj",
-      "msbuildProject": "../PayrollManagement.Domain/PayrollManagement.Domain.csproj"
+      "path": "../PayrollManagement.Employees.Domain/PayrollManagement.Employees.Domain.csproj",
+      "msbuildProject": "../PayrollManagement.Employees.Domain/PayrollManagement.Employees.Domain.csproj"
     },
-    "PayrollManagement.Infraestructure/1.0.0": {
+    "PayrollManagement.Employees.Infraestructure/1.0.0": {
       "type": "project",
-      "path": "../PayrollManagement.Infraestructure/PayrollManagement.Infraestructure.csproj",
-      "msbuildProject": "../PayrollManagement.Infraestructure/PayrollManagement.Infraestructure.csproj"
+      "path": "../PayrollManagement.Employees.Infraestructure/PayrollManagement.Employees.Infraestructure.csproj",
+      "msbuildProject": "../PayrollManagement.Employees.Infraestructure/PayrollManagement.Employees.Infraestructure.csproj"
+    },
+    "PayrollManagement.Payroll.Application/1.0.0": {
+      "type": "project",
+      "path": "../PayrollManagement.Payroll.Application/PayrollManagement.Payroll.Application.csproj",
+      "msbuildProject": "../PayrollManagement.Payroll.Application/PayrollManagement.Payroll.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2995,8 +3010,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.4",
-      "PayrollManagement.Application >= 1.0.0",
-      "PayrollManagement.Infraestructure >= 1.0.0",
+      "PayrollManagement.Employees.Application >= 1.0.0",
+      "PayrollManagement.Employees.Infraestructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3006,9 +3021,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.API\\PayrollManagement.API.csproj",
-      "projectName": "PayrollManagement.API",
-      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.API\\PayrollManagement.API.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.API\\PayrollManagement.Web.API.csproj",
+      "projectName": "PayrollManagement.Web.API",
+      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.API\\PayrollManagement.Web.API.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.API\\obj\\",
       "projectStyle": "PackageReference",
@@ -3027,11 +3042,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Application\\PayrollManagement.Application.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Application\\PayrollManagement.Application.csproj"
+            "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Employees.Application\\PayrollManagement.Employees.Application.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Employees.Application\\PayrollManagement.Employees.Application.csproj"
             },
-            "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Infraestructure\\PayrollManagement.Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Infraestructure\\PayrollManagement.Infraestructure.csproj"
+            "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Employees.Infraestructure\\PayrollManagement.Employees.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\PayrollManagement\\PayrollManagement.Employees.Infraestructure\\PayrollManagement.Employees.Infraestructure.csproj"
             }
           }
         }

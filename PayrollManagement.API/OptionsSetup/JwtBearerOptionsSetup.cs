@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using PayrollManagement.Infraestructure.Authentication;
@@ -17,6 +18,9 @@ namespace PayrollManagement.API.OptionsSetup
 
         public void Configure(JwtBearerOptions options)
         {
+            options.Audience = _jwtOptions.Audience;
+            options.Authority = _jwtOptions.Issuer;
+
             options.TokenValidationParameters = new()
             {
                 ValidateIssuer = true,
@@ -25,7 +29,7 @@ namespace PayrollManagement.API.OptionsSetup
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = _jwtOptions.Issuer,
                 ValidAudience = _jwtOptions.Audience,
-                IssuerSigningKey = new SymmetricSecurityKey( 
+                IssuerSigningKey = new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(_jwtOptions.SecretKey))
             };
         }

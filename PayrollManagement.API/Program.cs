@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using PayrollManagement.API;
 using PayrollManagement.API.Extensions;
 using PayrollManagement.API.Middlewares;
@@ -11,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPresentationApi()
                 .AddInfraestructure(builder.Configuration)
-                .AddApplication();
+                .AddEmployeeApplication();
 
 builder.Services.AddHttpsRedirection(opt => opt.HttpsPort = 443);
 
@@ -24,6 +25,14 @@ builder.WebHost.ConfigureKestrel(options =>
 builder.Services.AddAuthentication(auth => 
        auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer();
+
+builder.Services.AddAuthorization(auth =>
+{
+    auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+        .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+        .RequireAuthenticatedUser().Build()
+        );
+});
 
 
 builder.Services.ConfigureOptions<JwtOptionsSetup>();
@@ -48,8 +57,8 @@ app.UseCors(builder => builder
         .AllowAnyOrigin()
         .AllowAnyMethod());
 
+app.UseRouting(); 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 

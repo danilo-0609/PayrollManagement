@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PayrollManagement.Application.Users.Common;
 using PayrollManagement.Application.Users.GetUserById;
 using PayrollManagement.Application.Users.Login;
 using PayrollManagement.Application.Users.Register;
@@ -18,7 +19,7 @@ namespace PayrollManagement.API.Controllers
             _mediator = mediator;
         }
 
-        
+
         [Authorize(Roles = "Admin")]
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetUserById(Guid userId)
@@ -30,7 +31,13 @@ namespace PayrollManagement.API.Controllers
                 errors => Problem(errors)
                 );
         }
+
+        [Authorize]
+        [Route("Secure")]
+        [HttpPost]
+        public IActionResult Secure() => Ok("Secure works!!");
         
+
 
         [Route("register")]
         [HttpPost]
@@ -58,7 +65,7 @@ namespace PayrollManagement.API.Controllers
                 );
 
             return tokenResult.Match(
-                userToken => Ok(userToken),
+                userToken => Ok(new TokenResponseDto(tokenResult.Value)),
                 errors => Problem(errors)
                 );
         }

@@ -1,0 +1,12 @@
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\bin\Debug\net7.0\PayrollManagement.Users.Domain.deps.json
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\bin\Debug\net7.0\PayrollManagement.Users.Domain.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\bin\Debug\net7.0\PayrollManagement.Users.Domain.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\PayrollManagement.Users.Domain.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\PayrollManagement.Users.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\PayrollManagement.Users.Domain.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\PayrollManagement.Users.Domain.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\PayrollManagement.Users.Domain.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\PayrollManagement.Users.Domain.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\refint\PayrollManagement.Users.Domain.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\PayrollManagement.Users.Domain.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Users.Domain\obj\Debug\net7.0\ref\PayrollManagement.Users.Domain.dll
