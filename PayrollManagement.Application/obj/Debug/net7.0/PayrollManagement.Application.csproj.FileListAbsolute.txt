@@ -1,0 +1,15 @@
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\bin\Debug\net7.0\PayrollManagement.Application.deps.json
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\bin\Debug\net7.0\PayrollManagement.Application.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\bin\Debug\net7.0\PayrollManagement.Application.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\bin\Debug\net7.0\PayrollManagement.Domain.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\bin\Debug\net7.0\PayrollManagement.Domain.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\refint\PayrollManagement.Application.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\PayrollManagement.Application.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Application\obj\Debug\net7.0\ref\PayrollManagement.Application.dll

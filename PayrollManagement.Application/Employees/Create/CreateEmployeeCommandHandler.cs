@@ -42,7 +42,7 @@ namespace PayrollManagement.Application.Employees.Create
             var employmentContractCreate = EmploymentContract.Create(command.EmploymentContractType, command.ContractTime);
             var addressCreate = Address.Create(command.Country, command.City, command.Neighborhood, command.HouseAddress);
             var phoneNumberCreate = PhoneNumber.Create(command.PhoneNumber);
-            var emailCreate = Email.Create(command.Email);
+                var emailCreate = Email.Create(command.Email);
 
 
             if (phoneNumberCreate is null )

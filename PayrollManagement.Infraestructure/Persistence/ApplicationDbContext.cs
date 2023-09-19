@@ -1,8 +1,10 @@
-﻿    using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PayrollManagement.Application.Data;
 using PayrollManagement.Domain.Employees;
 using PayrollManagement.Domain.Primitives;
+using PayrollManagement.Domain.Users;
 using PayrollManagement.Domain.ValueObjects;
 
 namespace PayrollManagement.Infraestructure.Persistence
@@ -10,17 +12,28 @@ namespace PayrollManagement.Infraestructure.Persistence
     public class ApplicationDbContext : DbContext, IApplicationDbContext, IUnitOfWork
     {
         private readonly IPublisher _publisher;
+        private readonly IConfiguration _configuration;
 
-        public ApplicationDbContext(DbContextOptions options ,IPublisher publisher) : base(options)
+        public ApplicationDbContext(DbContextOptions options, IPublisher publisher, IConfiguration configuration)
+            : base(options)
         {
             _publisher = publisher ?? throw new ArgumentNullException(nameof(publisher));
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
         public DbSet<Employee> Employees { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("SqlServer")!);
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
@@ -34,7 +47,7 @@ namespace PayrollManagement.Infraestructure.Persistence
 
             foreach (var domainEvent in domainEvents)
             {
-                await _publisher.Publish(domainEvent, cancellationToken);     
+                await _publisher.Publish(domainEvent, cancellationToken);
             }
 
             return result;

@@ -62,16 +62,47 @@ namespace PayrollManagement.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Salary");
 
-                    b.Property<DateTime>("Vacations")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("Vacation");
-
                     b.HasKey("Id");
 
                     b.HasIndex("Email")
                         .IsUnique();
 
                     b.ToTable("Employees", (string)null);
+                });
+
+            modelBuilder.Entity("PayrollManagement.Domain.Users.User", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("UserId");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("Email");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(90)
+                        .HasColumnType("nvarchar(90)")
+                        .HasColumnName("Username");
+
+                    b.HasKey("UserId");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("PayrollManagement.Domain.Employees.Employee", b =>
@@ -197,6 +228,23 @@ namespace PayrollManagement.Infraestructure.Migrations
                                 .HasForeignKey("EmployeeId");
                         });
 
+                    b.OwnsOne("PayrollManagement.Domain.ValueObjects.Vacations", "Vacations", b1 =>
+                        {
+                            b1.Property<Guid>("EmployeeId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<DateTime>("NextVacations")
+                                .HasColumnType("datetime2")
+                                .HasColumnName("Vacation");
+
+                            b1.HasKey("EmployeeId");
+
+                            b1.ToTable("Employees");
+
+                            b1.WithOwner()
+                                .HasForeignKey("EmployeeId");
+                        });
+
                     b.Navigation("Address")
                         .IsRequired();
 
@@ -210,6 +258,9 @@ namespace PayrollManagement.Infraestructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Pension")
+                        .IsRequired();
+
+                    b.Navigation("Vacations")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

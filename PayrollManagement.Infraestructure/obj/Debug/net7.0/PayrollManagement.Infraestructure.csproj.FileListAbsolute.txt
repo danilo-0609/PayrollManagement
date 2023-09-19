@@ -1,0 +1,17 @@
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\bin\Debug\net7.0\PayrollManagement.Infraestructure.deps.json
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\bin\Debug\net7.0\PayrollManagement.Infraestructure.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\bin\Debug\net7.0\PayrollManagement.Infraestructure.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\bin\Debug\net7.0\PayrollManagement.Application.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\bin\Debug\net7.0\PayrollManagement.Domain.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\bin\Debug\net7.0\PayrollManagement.Application.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\bin\Debug\net7.0\PayrollManagement.Domain.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\refint\PayrollManagement.Infraestructure.dll
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\PayrollManagement.Infraestructure.pdb
+C:\Users\USUARIO\source\repos\PayrollManagement\PayrollManagement.Infraestructure\obj\Debug\net7.0\ref\PayrollManagement.Infraestructure.dll

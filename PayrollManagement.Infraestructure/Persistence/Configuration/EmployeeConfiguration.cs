@@ -44,7 +44,7 @@ namespace PayrollManagement.Infraestructure.Persistence.Configuration
                 email => email.Value,
                 value => Email.Create(value)!)
                 .HasColumnName("Email")
-                .HasMaxLength(255);     
+                .HasMaxLength(255);
 
             builder.HasIndex(c => c.Email).IsUnique();
 
